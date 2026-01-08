@@ -63,14 +63,3 @@ void	error_exit(void)
 	write(2, "Error\n", 6);
 	exit(1);
 }
-
-/*
-#include <stdio.h>
-
-int	main(int ac, char *av [])
-{
-	if (ac == 2)
-		printf("%ld\n", ft_atol(av[1]));
-	return (0);
-}
-*/
