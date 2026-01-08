@@ -31,8 +31,8 @@ all: $(NAME)
 $(LIBFT):
 	@make -C $(LIBFT_DIR)
 
-$(NAME): $(LIBFT) $(OBJ) 
-	ar rcs $(NAME) $(LIBFT) $(OBJ)
+$(NAME): $(LIBFT) $(OBJ)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIBFT)
 	
 clean:
 	@make clean -C $(LIBFT_DIR)
