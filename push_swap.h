@@ -6,7 +6,7 @@
 /*   By: fjose-hi <fjose-hi@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 17:55:45 by fjose-hi          #+#    #+#             */
-/*   Updated: 2026/01/07 20:11:00 by fjose-hi         ###   ########.fr       */
+/*   Updated: 2026/01/08 20:30:39 by fjose-hi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,14 +51,12 @@ void	ft_stackadd_back(t_stack **stack, t_stack *new);
 void	free_stack(t_stack **stack);
 
 void	assign_index(t_stack *stack);
+t_stack	*init_stack(int ac, char **av);
+
 int		is_sorted(t_stack *stack);
 void	sort_method(t_stack **stack_a, t_stack **stack_b, int stack_size);
-int		find_lowest_index(t_stack *stack);
-int		find_position(t_stack *stack, int target_index);
-
 void	sort_3(t_stack **stack);
-void	sort_4(t_stack **stack_a, t_stack **stack_b);
-void	sort_5(t_stack **stack_a, t_stack **stack_b);
+void	sort_4_or_5(t_stack **stack_a, t_stack **stack_b);
 
 void	ft_putchar2(char c);
 

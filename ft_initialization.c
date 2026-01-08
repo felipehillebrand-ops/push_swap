@@ -6,7 +6,7 @@
 /*   By: fjose-hi <fjose-hi@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 19:30:59 by fjose-hi          #+#    #+#             */
-/*   Updated: 2026/01/07 21:24:55 by fjose-hi         ###   ########.fr       */
+/*   Updated: 2026/01/08 20:30:56 by fjose-hi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ static int	count_lower(t_stack *stack, int value)
 	}
 	return (count);
 }
+
 void	assign_index(t_stack *stack)
 {
 	t_stack	*current;
@@ -37,33 +38,35 @@ void	assign_index(t_stack *stack)
 	}
 }
 
-static t_stack	*init_stack(int ac, char **av)
+static t_stack	*init_stack_from_array(char **args)
+{
+	t_stack	*stack;
+	int		i;
+
+	stack = NULL;
+	i = 0;
+	while (args[i])
+	{
+		ft_stackadd_back(&stack, ft_newnode(ft_atol(args[i])));
+		i++;
+	}
+	return (stack);
+}
+
+t_stack	*init_stack(int ac, char **av)
 {
 	t_stack	*stack;
 	char	**args;
-	int		i;
 
 	stack = NULL;
 	if (ac == 2)
 	{
 		args = ft_split(av[1], ' ');
-		i = 0;
-		while (args[i])
-		{
-			ft_stackadd_back(&stack, ft_newnode(ft_atol(args[i])));
-			i++;
-		}
+		stack = init_stack_from_array(args);
 		free_arg(args);
 	}
 	else
-	{
-		i = 1;
-		while (i < ac)
-		{
-			ft_stackadd_back(&stack, ft_newnode(ft_atol(av[i])));
-			i++;
-		}
-	}
+		stack = init_stack_from_array(av + 1);
 	return (stack);
 }
 

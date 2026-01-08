@@ -6,7 +6,7 @@
 #    By: fjose-hi <fjose-hi@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/13 21:06:09 by fjose-hi          #+#    #+#              #
-#    Updated: 2026/01/07 19:50:09 by fjose-hi         ###   ########.fr        #
+#    Updated: 2026/01/08 19:51:33 by fjose-hi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CFLAGS = -Wall -Wextra -Werror
 LIBFT_DIR = ./Libft
 
 SRC = ft_checklist.c ft_checklist_utils.c ft_swap.c ft_push.c ft_rotate.c ft_rev_rotate.c \
-	  ft_stack.c ft_initialization.c ft_sorting.c ft_tiny_sort.c
+	  ft_stack.c ft_stack2.c ft_initialization.c ft_sorting.c ft_tiny_sort.c
 
 BONUSSRC = ft_putchar2.c
 
