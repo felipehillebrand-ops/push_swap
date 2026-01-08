@@ -32,7 +32,7 @@ $(LIBFT):
 	@make -C $(LIBFT_DIR)
 
 $(NAME): $(LIBFT) $(OBJ) 
-	ar rcs $(NAME) $(LIBFT) $(OBJ)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) -L$(LIBFT_DIR) -lft
 	
 clean:
 	@make clean -C $(LIBFT_DIR)
@@ -45,7 +45,7 @@ fclean: clean
 re: fclean all
 
 %.o:%.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -I./Libft -c $< -o $@
 
 bonus: .bonus
 
@@ -53,4 +53,7 @@ bonus: .bonus
 	touch .bonus
 	ar rcs $(NAME) $(LIBFT) $(OBJ) $(BONUSOBJ)
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re bonus test
+
+test: all
+	python3 test_runner.py
