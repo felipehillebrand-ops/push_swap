@@ -1,0 +1,6 @@
+
+# Build artifacts
+*.o
+*.a
+push_swap
+.bonus
