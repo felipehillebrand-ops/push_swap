@@ -6,7 +6,7 @@
 /*   By: fjose-hi <fjose-hi@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 23:20:15 by fjose-hi          #+#    #+#             */
-/*   Updated: 2026/01/08 19:50:47 by fjose-hi         ###   ########.fr       */
+/*   Updated: 2026/01/08 21:06:17 by fjose-hi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,16 +70,3 @@ void	ft_stackadd_back(t_stack **stack, t_stack *new)
 	last = ft_stacklast(*stack);
 	last->next = new;
 }
-/*
-void	ft_freelist(t_stack *stack)
-{
-	t_stack	*tmp;
-
-	while (stack)
-	{
-		tmp = stack;
-		stack = stack->next;
-		free(tmp);
-	}
-}
-*/
