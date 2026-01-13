@@ -14,30 +14,16 @@
 
 void	sort_3(t_stack **stack)
 {
-	int	a;
-	int	b;
-	int	c;
+	int	highest_pos;
 
-	if (!stack || !*stack || !(*stack)->next || !(*stack)->next->next)
+	if (is_sorted(*stack))
 		return ;
-	a = (*stack)->index;
-	b = (*stack)->next->index;
-	c = (*stack)->next->next->index;
-	if (a > b && b > c)
-	{
-		do_sa(stack);
-		do_rra(stack);
-	}
-	else if (a > c && c > b)
+	highest_pos = find_position(*stack, find_highest_index(*stack));
+	if (highest_pos == 0)
 		do_ra(stack);
-	else if (b > a && a > c)
+	else if (highest_pos == 1)
 		do_rra(stack);
-	else if (b > c && c > a)
-	{
-		do_sa(stack);
-		do_ra(stack);
-	}
-	else if (c > a && a > b)
+	if ((*stack)->content > (*stack)->next->content)
 		do_sa(stack);
 }
 
@@ -73,7 +59,7 @@ void	sort_4_or_5(t_stack **stack_a, t_stack **stack_b)
 		lowest_to_b(stack_a, stack_b);
 	sort_3(stack_a);
 	if (ft_stacksize(*stack_b) == 2
-		&& (*stack_b)->index < (*stack_b)->next->index)
+		&& (*stack_b)->content < (*stack_b)->next->content)
 		do_sb(stack_b);
 	while (*stack_b)
 		do_pa(stack_a, stack_b);

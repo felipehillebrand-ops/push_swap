@@ -63,6 +63,8 @@ void	push_chunks_to_b(t_stack **stack_a, t_stack **stack_b, int chunk_size)
 	chunk_end = chunk_size;
 	while (chunk_start < total_size)
 	{
+		if (chunk_end > total_size)
+			chunk_end = total_size;
 		while (exists_in_chunk(*stack_a, chunk_start, chunk_end))
 			push_to_b(stack_a, stack_b, chunk_start, chunk_end);
 		chunk_start += chunk_size;
