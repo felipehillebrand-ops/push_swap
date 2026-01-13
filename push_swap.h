@@ -51,6 +51,10 @@ void	push_chunks_to_b(t_stack **stack_a, t_stack **stack_b, int chunk_size);
 void	push_back_to_a(t_stack **stack_a, t_stack **stack_b);
 
 /* Moves */
+void	swap(t_stack **stack);
+void	push(t_stack **src, t_stack **dest);
+void	rotate(t_stack **stack);
+void	rev_rotate(t_stack **stack);
 void	do_sa(t_stack **stack_a);
 void	do_sb(t_stack **stack_b);
 void	do_ss(t_stack **stack_a, t_stack **stack_b);

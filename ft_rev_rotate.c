@@ -5,42 +5,42 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fjose-hi <fjose-hi@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/23 17:46:43 by fjose-hi          #+#    #+#             */
-/*   Updated: 2025/12/30 19:13:53 by fjose-hi         ###   ########.fr       */
+/*   Created: 2026/01/03 17:21:49 by fjose-hi          #+#    #+#             */
+/*   Updated: 2026/01/09 18:31:02 by fjose-hi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	ft_rev_rotate(t_stack **stack)
+void	rev_rotate(t_stack **stack)
 {
-	t_stack	*tail;
-	t_stack	*before_tail;
+	t_stack	*last;
+	t_stack	*before_last;
 
-	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
+	if (!stack || !*stack || !(*stack)->next)
 		return ;
-	tail = ft_stacklast(*stack);
-	before_tail = ft_stackbeforelast(*stack);
-	before_tail->next = NULL;
-	tail->next = *stack;
-	*stack = tail;
+	last = ft_stacklast(*stack);
+	before_last = ft_stackbeforelast(*stack);
+	before_last->next = NULL;
+	last->next = *stack;
+	*stack = last;
 }
 
 void	do_rra(t_stack **stack_a)
 {
-	ft_rev_rotate(stack_a);
+	rev_rotate(stack_a);
 	write(1, "rra\n", 4);
 }
 
 void	do_rrb(t_stack **stack_b)
 {
-	ft_rev_rotate(stack_b);
+	rev_rotate(stack_b);
 	write(1, "rrb\n", 4);
 }
 
 void	do_rrr(t_stack **stack_a, t_stack **stack_b)
 {
-	ft_rev_rotate(stack_a);
-	ft_rev_rotate(stack_b);
+	rev_rotate(stack_a);
+	rev_rotate(stack_b);
 	write(1, "rrr\n", 4);
 }

@@ -11,47 +11,55 @@
 # **************************************************************************** #
 
 NAME = push_swap
+CHECKER_NAME = checker
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 LIBFT_DIR = ./Libft
 
-SRC = ft_initialization.c ft_checklist.c ft_checklist_utils.c ft_sorting.c \
-      ft_tiny_sort.c ft_push_chunks_to_b.c ft_push_back_to_a.c ft_swap.c \
-	  ft_push.c ft_rotate.c ft_rev_rotate.c ft_stack.c ft_stack2.c
+# --- Source Files ---
+# Shared source files (used by both push_swap and checker)
+SHARED_SRC = ft_initialization.c ft_checklist.c ft_checklist_utils.c ft_sorting.c \
+             ft_tiny_sort.c ft_push_chunks_to_b.c ft_push_back_to_a.c ft_swap.c \
+             ft_push.c ft_rotate.c ft_rev_rotate.c ft_stack.c ft_stack2.c
 
-BONUSSRC = ft_putchar2.c
+# Main push_swap source file
+PUSH_SWAP_SRC = push_swap_main.c
 
-OBJ = $(SRC:.c=.o)
-BONUSOBJ = $(BONUSSRC:.c=.o)
+# Checker source file
+CHECKER_SRC = checker.c
+
+# --- Object Files ---
+SHARED_OBJ = $(SHARED_SRC:.c=.o)
+PUSH_SWAP_OBJ = $(PUSH_SWAP_SRC:.c=.o)
+CHECKER_OBJ = $(CHECKER_SRC:.c=.o)
 
 LIBFT = $(LIBFT_DIR)/libft.a
 
-all: $(NAME) 
+all: $(NAME)
 
 $(LIBFT):
 	@make -C $(LIBFT_DIR)
 
-$(NAME): $(LIBFT) $(OBJ) 
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIBFT)
-	
+$(NAME): $(LIBFT) $(SHARED_OBJ) $(PUSH_SWAP_OBJ)
+	$(CC) $(CFLAGS) -o $(NAME) $(SHARED_OBJ) $(PUSH_SWAP_OBJ) $(LIBFT)
+
+checker: $(LIBFT) $(SHARED_OBJ) $(CHECKER_OBJ)
+	$(CC) $(CFLAGS) -o $(CHECKER_NAME) $(SHARED_OBJ) $(CHECKER_OBJ) $(LIBFT)
+
 clean:
 	@make clean -C $(LIBFT_DIR)
-	rm -f $(OBJ) $(BONUSOBJ)
+	rm -f $(SHARED_OBJ) $(PUSH_SWAP_OBJ) $(CHECKER_OBJ)
 
 fclean: clean
 	@make fclean -C $(LIBFT_DIR)
-	rm -f $(NAME)
+	rm -f $(NAME) $(CHECKER_NAME)
 
 re: fclean all
 
 %.o:%.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-bonus: .bonus
+bonus: checker
 
-.bonus: $(LIBFT) $(OBJ) $(BONUSOBJ)
-	touch .bonus
-	ar rcs $(NAME) $(LIBFT) $(OBJ) $(BONUSOBJ)
-
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re bonus checker

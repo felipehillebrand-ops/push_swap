@@ -69,20 +69,3 @@ t_stack	*init_stack(int ac, char **av)
 		stack = init_stack_from_array(av + 1);
 	return (stack);
 }
-
-int	main(int ac, char **av)
-{
-	t_stack	*stack_a;
-	t_stack	*stack_b;
-	int		size;
-
-	parse_init(ac, av);
-	stack_a = init_stack(ac, av);
-	stack_b = NULL;
-	assign_index(stack_a);
-	size = ft_stacksize(stack_a);
-	sort_method(&stack_a, &stack_b, size);
-	ft_free_stack(&stack_a);
-	ft_free_stack(&stack_b);
-	return (0);
-}
