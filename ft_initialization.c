@@ -6,7 +6,7 @@
 /*   By: fjose-hi <fjose-hi@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 19:30:59 by fjose-hi          #+#    #+#             */
-/*   Updated: 2026/01/08 20:30:56 by fjose-hi         ###   ########.fr       */
+/*   Updated: 2026/01/12 21:16:28 by fjose-hi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ int	main(int ac, char **av)
 	assign_index(stack_a);
 	size = ft_stacksize(stack_a);
 	sort_method(&stack_a, &stack_b, size);
-	free_stack(&stack_a);
-	free_stack(&stack_b);
+	ft_free_stack(&stack_a);
+	ft_free_stack(&stack_b);
 	return (0);
 }

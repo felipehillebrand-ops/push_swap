@@ -6,7 +6,7 @@
 /*   By: fjose-hi <fjose-hi@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/03 17:39:35 by fjose-hi          #+#    #+#             */
-/*   Updated: 2026/01/08 19:49:35 by fjose-hi         ###   ########.fr       */
+/*   Updated: 2026/01/12 20:37:21 by fjose-hi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,57 @@ void	sort_method(t_stack **stack_a, t_stack **stack_b, int stack_size)
 		sort_3(stack_a);
 	else if (stack_size <= 5)
 		sort_4_or_5(stack_a, stack_b);
-//	else
-//		sort(stack_a, stack_b);
+	else
+		chunk_sort(stack_a, stack_b);
 }
+
+int	find_lowest_index(t_stack *stack)
+{
+	int	lowest;
+
+	if (!stack)
+		return (-1);
+	lowest = stack->index;
+	while (stack)
+	{
+		if (stack->index < lowest)
+			lowest = stack->index;
+		stack = stack->next;
+	}
+	return (lowest);
+}
+
+int	find_highest_index(t_stack *stack)
+{
+	int	highest;
+
+	if (!stack)
+		return (-1);
+	highest = stack->index;
+	while (stack)
+	{
+		if (stack->index > highest)
+			highest = stack->index;
+		stack = stack->next;
+	}
+	return (highest);
+}
+
+int	find_position(t_stack *stack, int target_index)
+{
+	int	pos;
+
+	pos = 0;
+	while (stack)
+	{
+		if (stack->index == target_index)
+			return (pos);
+		stack = stack->next;
+		pos++;
+	}
+	return (-1);
+}
+
 /*
 #include <stdio.h> 
 

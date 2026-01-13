@@ -6,42 +6,11 @@
 /*   By: fjose-hi <fjose-hi@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 17:40:04 by fjose-hi          #+#    #+#             */
-/*   Updated: 2026/01/08 19:55:53 by fjose-hi         ###   ########.fr       */
+/*   Updated: 2026/01/09 17:50:38 by fjose-hi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-static int	find_lowest_index(t_stack *stack)
-{
-	int	lowest;
-
-	if (!stack)
-		return (-1);
-	lowest = stack->index;
-	while (stack)
-	{
-		if (stack->index < lowest)
-			lowest = stack->index;
-		stack = stack->next;
-	}
-	return (lowest);
-}
-
-static int	find_position(t_stack *stack, int target_index)
-{
-	int	pos;
-
-	pos = 0;
-	while (stack)
-	{
-		if (stack->index == target_index)
-			return (pos);
-		stack = stack->next;
-		pos++;
-	}
-	return (-1);
-}
 
 void	sort_3(t_stack **stack)
 {
