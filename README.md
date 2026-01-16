@@ -21,7 +21,7 @@ Push_swap is a 42 School algorithm project. The goal is to sort data on a stack,
 ## Parsing:
 This project can be executed in two forms: *./push_swap "0 1 2 5 42"*   or *./push_swap 0 1 2 5 42*.
 
-Don't accept non-number, duplicates numbers, nunbers bigger or smaller than INT_MAX or  INT_MIN or multiples -0 +000 in the same argument.
+Don't accept non-number, duplicates numbers, nunbers bigger or smaller than INT_MAX or  INT_MIN or multiples "-0 +000" in the same argument.
 
 ## List Size:
 **Depending on the size of the list, one or more different algorithms were used:**  
