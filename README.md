@@ -28,7 +28,7 @@ Don't accept non-number, duplicates numbers, nunbers bigger or smaller than INT_
 - For 2 disorganized values, did a unique *"sa"*.  
 - For 3 disorganized values, have a specific function (*sort_3*);  
 - For 4 or 5 disorganized values, have a specific function (*sort_4_or_5* and his auxiliary function *lowest_to_b*);  
-- For 6 or more disorganized values, it was done a *chunk sort* algorithm (called too to butterfly sort). This sort divide stack a in many chunks for pass the stack a values to stack b, then return this values after to stack a sorted.
+- For 6 or more disorganized values, it was done a *chunk sort* algorithm (called too to *butterfly sort*). This sort divide stack a in many chunks for pass the stack a values to stack b, then return this values after to stack a sorted.
 
 # Instructions:
 ## How to compile: 
