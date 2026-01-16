@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by &lt;fhose-hi&gt;.*
+*This project has been created as part of the 42 curriculum by *fhose-hi*
 
 
 # Description:
@@ -19,7 +19,7 @@ Push_swap is a 42 School algorithm project. The goal is to sort data on a stack,
 **- rrr :** rra and rrb at the same time.
 
 ## Parsing:
-This project can be executed in two forms: ./push_swap "0 1 2 5 42"   or ./push_swap 0 1 2 5 42.
+This project can be executed in two forms: *./push_swap "0 1 2 5 42"*   or *./push_swap 0 1 2 5 42*.
 
 Don't accept non-number, duplicates numbers, nunbers bigger or smaller than INT_MAX or  INT_MIN or multiples -0 +000 in the same argument.
 
@@ -33,7 +33,7 @@ Don't accept non-number, duplicates numbers, nunbers bigger or smaller than INT_
 # Instructions:
 ## How to compile: 
 *make* (for compile the main part of the project);  
-*make bonus* - (for compile the bonus);
+*make bonus* (for compile the bonus);
 
 ## Execution commands:
 *./push_swap "values"* (For the main executable return the moves realized with a list of values. In "values" you put the args that you want);  
