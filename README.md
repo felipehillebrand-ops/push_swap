@@ -6,17 +6,17 @@ Push_swap is a 42 School algorithm project. The goal is to sort data on a stack,
 
 **Here the operations used in the project:**
 
-**- sa (swap a):** Swap the first 2 elements at the top of the stack a. Does nothing if there is only one or none.  
-**- sb (swap b) :** Swap the first 2 elements at the top of the stack b. Does nothing if there is only one or none.   
-**- ss :** sa and sb at the same time. 
-**- pa (push a):** Takes the first element on top of b and puts it on a. Does nothing if b is empty.   
-**- pb (push b):** Takes the first element on top of a and puts it on b. Does nothing if a is empty.   
-**- ra (rotate a):** Shifts all the elements ofREADM the stack a up by one position. The first element becomes the last.   
-**- rb (rotate b) :** Shifts all the elements of the stack b one position upwards. The first element becomes the last one.   
-**- rr :** ra and rb at the same time.   
-**- rra (reverse rotate a):** Shifts all elements of the stack down one position. the stack a. The last element becomes the first.   
-**- rrb (reverse rotate b):** Shifts all the elements of the stack b one position downwards. the stack b. The last element becomes the first.   
-**- rrr :** rra and rrb at the same time.
+- **sa (swap a):** Swap the first 2 elements at the top of the stack a. Does nothing if there is only one or none.  
+- **sb (swap b) :** Swap the first 2 elements at the top of the stack b. Does nothing if there is only one or none.   
+- **ss :** sa and sb at the same time. 
+- **pa (push a):** Takes the first element on top of b and puts it on a. Does nothing if b is empty.   
+- **pb (push b):** Takes the first element on top of a and puts it on b. Does nothing if a is empty.   
+- **ra (rotate a):** Shifts all the elements ofREADM the stack a up by one position. The first element becomes the last.   
+- **rb (rotate b) :** Shifts all the elements of the stack b one position upwards. The first element becomes the last one.   
+- **rr :** ra and rb at the same time.   
+- **rra (reverse rotate a):** Shifts all elements of the stack down one position. the stack a. The last element becomes the first.   
+- **rrb (reverse rotate b):** Shifts all the elements of the stack b one position downwards. the stack b. The last element becomes the first.   
+- **rrr :** rra and rrb at the same time.
 
 ## Parsing:
 This project can be executed in two forms: *./push_swap "0 1 2 5 42"*   or *./push_swap 0 1 2 5 42*.
@@ -59,7 +59,8 @@ Don't accept non-number, duplicates numbers, nunbers bigger or smaller than INT_
 
 # Resources:
 ## References:
-**Subject:** The official 42 School project pdf.  
+**Subject:** The official 42 School project pdf.
+
 **Sort algorithms:** Articles, push_swap visualizer tools, GitHub, 42 colleagues and AI.
 
 ## AI usage:
