@@ -1,6 +1,6 @@
 *This project has been created as part of the 42 curriculum by &lt;fhose-hi&gt;.*
 
-#Description:
+##Description:
 Push_swap is a 42 School algorithm project. The goal is to sort data on a stack, with a limited set of instructions with the minimum number of movements possible.
 
 Here the operations used in the project:
@@ -27,7 +27,7 @@ For 3 disorganized values, have a specific function (sort_3);
 For 4 or 5 disorganized values, have a specific function (sort_4_or_5 and his auxiliary function lowest_to_b);
 For 6 or more disorganized values, it was done a chunk sort algorithm (called too to butterfly sort). This sort divide stack a in many chunks for pass the stack a values to stack b, then return this values after to stack a sorted.
 
-#Instructions:
+##Instructions:
 How to compile: 
 make - for compile the main part of the project;
 make bonus - for compile the bonus;
@@ -53,7 +53,7 @@ Bonus commands:
 ARG="values; ./push_swap $ARG | ./checker $ARG - For compare if my checker program hit with my push_swap program;
 
 
-#Resources:
+##Resources:
 References:
 Subject: The official 42 School project pdf.
 Sort algorithms: Articles, push_swap visualizer tools, GitHub, 42 colleagues and AI.
