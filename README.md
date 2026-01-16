@@ -1,5 +1,6 @@
 *This project has been created as part of the 42 curriculum by &lt;fhose-hi&gt;.*
 
+
 **Description:**
 Push_swap is a 42 School algorithm project. The goal is to sort data on a stack, with a limited set of instructions with the minimum number of movements possible.
 
@@ -27,6 +28,8 @@ For 3 disorganized values, have a specific function (sort_3);
 For 4 or 5 disorganized values, have a specific function (sort_4_or_5 and his auxiliary function lowest_to_b);
 For 6 or more disorganized values, it was done a chunk sort algorithm (called too to butterfly sort). This sort divide stack a in many chunks for pass the stack a values to stack b, then return this values after to stack a sorted.
 
+
+
 **Instructions:**
 How to compile: 
 make - for compile the main part of the project;
@@ -51,6 +54,7 @@ ARG=$(seq 1 500 | shuf | tr '\n' ' '); ./push_swap $ARG - For check the moves re
 Bonus commands:
 ./checker "values" - For run the checker of bonus. In "values" you put the args that you want and the checker will return OK or KO;
 ARG="values; ./push_swap $ARG | ./checker $ARG - For compare if my checker program hit with my push_swap program;
+
 
 
 **Resources:**
