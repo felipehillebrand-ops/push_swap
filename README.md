@@ -19,7 +19,7 @@ Push_swap is a 42 School algorithm project. The goal is to sort data on a stack,
 - **rrr :** rra and rrb at the same time.
 
 ## Parsing:
-This project can be executed in two forms: *./push_swap "0 1 2 5 42"*   or *./push_swap 0 1 2 5 42*.
+This project can be executed in two forms: `./push_swap "0 1 2 5 42"`   or `./push_swap 0 1 2 5 42.
 
 Don't accept non-number, duplicates numbers, numbers bigger or smaller than INT_MAX or  INT_MIN or multiples "-0 +000" in the same argument.
 
