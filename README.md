@@ -42,18 +42,18 @@ Don't accept non-number, duplicates numbers, numbers bigger or smaller than INT_
 `ARG="values"; ./push_swap $ARG > out; cat out | ./checker_linux $ARG; wc -l out` - Return OK or KO and the number of moves realized;
 
 **For 100 random moves:**  
-*ARG=$(seq 1 100 | shuf | tr '\n' ' '); ./push_swap $ARG | ./checker_linux $ARG* (For check if the sort return OK or KO with 100 random values);  
-*ARG=$(seq 1 100 | shuf | tr '\n' ' '); ./push_swap $ARG | wc -l* (For check the number of moves realized with 100 random values);  
-*ARG=$(seq 1 100 | shuf | tr '\n' ' '); ./push_swap $ARG* (For check the moves realized with 100 random values);
+`ARG=$(seq 1 100 | shuf | tr '\n' ' '); ./push_swap $ARG | ./checker_linux $ARG` - For check if the sort return OK or KO with 100 random values;  
+`ARG=$(seq 1 100 | shuf | tr '\n' ' '); ./push_swap $ARG | wc -l` - For check the number of moves realized with 100 random values;  
+`ARG=$(seq 1 100 | shuf | tr '\n' ' '); ./push_swap $ARG` - For check the moves realized with 100 random values;
 
 **For 500 random moves:**  
-*ARG=$(seq 1 500 | shuf | tr '\n' ' '); ./push_swap $ARG | ./checker_linux $ARG* (For check if the sort return OK or KO with 500 random values);  
-*ARG=$(seq 1 500 | shuf | tr '\n' ' '); ./push_swap $ARG | wc -l* (For check the number of moves realized with 500 random values);  
-*ARG=$(seq 1 500 | shuf | tr '\n' ' '); ./push_swap $ARG* (For check the moves realized with 500 random values);
+`ARG=$(seq 1 500 | shuf | tr '\n' ' '); ./push_swap $ARG | ./checker_linux $ARG` - For check if the sort return OK or KO with 500 random values;  
+`ARG=$(seq 1 500 | shuf | tr '\n' ' '); ./push_swap $ARG | wc -l` - For check the number of moves realized with 500 random values;  
+`ARG=$(seq 1 500 | shuf | tr '\n' ' '); ./push_swap $ARG` - For check the moves realized with 500 random values;
 
 **Bonus commands:**  
-*./checker "values"* (For run the checker of bonus. In "values" you put the args that you want and the checker will return OK or KO);  
-*ARG="values; ./push_swap $ARG | ./checker $ARG* (For compare if my checker program hit with my push_swap program);
+`./checker "values"` - For run the checker of bonus. In "values" you put the args that you want and the checker will return OK or KO;  
+`ARG="values; ./push_swap $ARG | ./checker $ARG` - For compare if my checker program hit with my push_swap program;
 
 
 
