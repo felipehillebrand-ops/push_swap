@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by **fhose-hi**.*
+*This project has been created as part of the 42 curriculum by **fjose-hi**.*
 
 
 # Description:
@@ -11,7 +11,7 @@ Push_swap is a 42 School algorithm project. The goal is to sort data on a stack,
 - **ss :** sa and sb at the same time. 
 - **pa (push a):** Takes the first element on top of b and puts it on a. Does nothing if b is empty.   
 - **pb (push b):** Takes the first element on top of a and puts it on b. Does nothing if a is empty.   
-- **ra (rotate a):** Shifts all the elements ofREADM the stack a up by one position. The first element becomes the last.   
+- **ra (rotate a):** Shifts all the elements of the stack a up by one position. The first element becomes the last.   
 - **rb (rotate b) :** Shifts all the elements of the stack b one position upwards. The first element becomes the last one.   
 - **rr :** ra and rb at the same time.   
 - **rra (reverse rotate a):** Shifts all elements of the stack down one position. the stack a. The last element becomes the first.   
@@ -21,7 +21,7 @@ Push_swap is a 42 School algorithm project. The goal is to sort data on a stack,
 ## Parsing:
 This project can be executed in two forms: *./push_swap "0 1 2 5 42"*   or *./push_swap 0 1 2 5 42*.
 
-Don't accept non-number, duplicates numbers, nunbers bigger or smaller than INT_MAX or  INT_MIN or multiples "-0 +000" in the same argument.
+Don't accept non-number, duplicates numbers, numbers bigger or smaller than INT_MAX or  INT_MIN or multiples "-0 +000" in the same argument.
 
 ## List Size:
 **Depending on the size of the list, one or more different algorithms were used:**  
@@ -64,6 +64,6 @@ Don't accept non-number, duplicates numbers, nunbers bigger or smaller than INT_
 **Sort algorithms:** Articles, push_swap visualizer tools, GitHub, 42 colleagues and AI.
 
 ## AI usage:
-**Debugging & Compilation:** AI was used to discover some buggs in my code and problems when I tried to compile some times my program.  
+**Debugging & Compilation:** AI was used to discover some bugs in my code and problems when I tried to compile some times my program.  
 
 **Terminal commands:** AI help me to discover some commands in the terminal like *"ARG=$(seq 1 100 | shuf | tr '\n' ' '); ./push_swap $ARG"* or *"ARG="values"; ./push_swap $ARG > out; cat out | ./checker_linux $ARG; wc -l out "*.
