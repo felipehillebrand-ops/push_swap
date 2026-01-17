@@ -32,8 +32,8 @@ Don't accept non-number, duplicates numbers, numbers bigger or smaller than INT_
 
 # Instructions:
 ## How to compile: 
-*make* (for compile the main part of the project);  
-*make bonus* (for compile the bonus);
+`*make*` (for compile the main part of the project);  
+`*make bonus*` (for compile the bonus);
 
 ## Execution commands:
 *./push_swap "values"* (For the main executable return the moves realized with a list of values. In "values" you put the args that you want);  
