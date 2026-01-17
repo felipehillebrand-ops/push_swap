@@ -32,14 +32,14 @@ Don't accept non-number, duplicates numbers, numbers bigger or smaller than INT_
 
 # Instructions:
 ## How to compile: 
-`make` For compile the main part of the project;  
-`make bonus` For compile the bonus;
+`make` - For compile the main part of the project;  
+`make bonus` - For compile the bonus;
 
 ## Execution commands:
-`./push_swap "values"` For the main executable return the moves realized with a list of values. In "values" you put the args that you want;  
-`ARG="values"; ./push_swap $ARG | ./checker_linux $ARG` For check if the sort return OK or return KO conform the 42 school checker;  
-`ARG="values; ./push_swap $ARG | wc -l` For check the number of moves realized;  
-`ARG="values"; ./push_swap $ARG > out; cat out | ./checker_linux $ARG; wc -l out` Return OK or KO and the number of moves realized;
+`./push_swap "values"` - For the main executable return the moves realized with a list of values. In "values" you put the args that you want;  
+`ARG="values"; ./push_swap $ARG | ./checker_linux $ARG` - For check if the sort return OK or return KO conform the 42 school checker;  
+`ARG="values; ./push_swap $ARG | wc -l` - For check the number of moves realized;  
+`ARG="values"; ./push_swap $ARG > out; cat out | ./checker_linux $ARG; wc -l out` - Return OK or KO and the number of moves realized;
 
 **For 100 random moves:**  
 *ARG=$(seq 1 100 | shuf | tr '\n' ' '); ./push_swap $ARG | ./checker_linux $ARG* (For check if the sort return OK or KO with 100 random values);  
