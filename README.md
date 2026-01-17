@@ -66,4 +66,4 @@ Don't accept non-number, duplicates numbers, numbers bigger or smaller than INT_
 ## AI usage:
 **Debugging & Compilation:** AI was used to discover some bugs in my code and problems when I tried to compile some times my program.  
 
-**Terminal commands:** AI help me to discover some commands in the terminal like *"ARG=$(seq 1 100 | shuf | tr '\n' ' '); ./push_swap $ARG"* or *"ARG="values"; ./push_swap $ARG > out; cat out | ./checker_linux $ARG; wc -l out "*.
+**Terminal commands:** AI help me to discover some commands in the terminal like `"ARG=$(seq 1 100 | shuf | tr '\n' ' '); ./push_swap $ARG"` or `"ARG="values"; ./push_swap $ARG > out; cat out | ./checker_linux $ARG; wc -l out "`.
