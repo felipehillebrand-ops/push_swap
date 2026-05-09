@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by **fjose-hi**.*
+*This project has been created as part of the 42 curriculum by fjose-hi.*
 
 
 # Description:
@@ -30,6 +30,8 @@ Don't accept non-number, duplicates numbers, numbers bigger or smaller than INT_
 - For 4 or 5 disorganized values, have a specific function (*sort_4_or_5* and his auxiliary function *lowest_to_b*);  
 - For 6 or more disorganized values, it was done a *chunk sort* algorithm (called too to *butterfly sort*). This sort divide stack a in many chunks for pass the stack a values to stack b, then return this values after to stack a sorted.
 
+---
+
 # Instructions:
 ## How to compile: 
 `make` - For compile the main part of the project;  
@@ -55,7 +57,7 @@ Don't accept non-number, duplicates numbers, numbers bigger or smaller than INT_
 `./checker "values"` - For run the checker of bonus. In "values" you put the args that you want and the checker will return OK or KO;  
 `ARG="values; ./push_swap $ARG | ./checker $ARG` - For compare if my checker program hit with my push_swap program;
 
-
+---
 
 # Resources:
 ## References:
@@ -67,3 +69,17 @@ Don't accept non-number, duplicates numbers, numbers bigger or smaller than INT_
 **Debugging & Compilation:** AI was used to discover some bugs in my code and problems when I tried to compile some times my program.  
 
 **Terminal commands:** AI help me to discover some commands in the terminal like `"ARG=$(seq 1 100 | shuf | tr '\n' ' '); ./push_swap $ARG"` or `"ARG="values"; ./push_swap $ARG > out; cat out | ./checker_linux $ARG; wc -l out "`.
+
+---
+
+# License
+
+This project was developed for educational purposes as part of the 42 curriculum.
+
+---
+
+# Author
+
+Felipe José Hillebrand
+
+GitHub: https://github.com/felipehillebrand-ops
